@@ -2,7 +2,7 @@ language: python
 python:
 - '2.7'
 install:
-- ansible/localhost/base/provision.sh
+- ansible/localhost/provision.sh
 script:
 - php -v
 notifications:
