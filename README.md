@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/web-masons/vagrant-ansible-php-cli.svg)](https://travis-ci.org/web-masons/vagrant-ansible-php-cli)
 # Vagrant Ansible PHP CLI
 
 A Vagrant environment for creating a Box for running command line PHP scripts using the shell provisioner to run
