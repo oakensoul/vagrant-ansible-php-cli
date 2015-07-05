@@ -28,14 +28,6 @@ out of sync.
 $ vagrant plugin install vagrant-vbguest
 ```
 
-### Setup
-
-To begin using the environment, you will need to clone it from GitHub.
-
-```bash
-$ git clone git@github.com:oakensoul/vagrant-ansible-php-cli.git
-```
-
 ### Vagrant
 
 Once you have the repository cloned, you need only spin up your Vagrant environment. If you need information about

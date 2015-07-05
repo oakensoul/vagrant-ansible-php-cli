@@ -79,7 +79,7 @@ included in the project:
    # Navigate to the newly cloned directory
    cd vagrant-ansible-php-cli
    # Assign the original repo to a remote called "upstream"
-   git remote add upstream https://github.com/oakensoul/vagrant-ansible-php-cli
+   git remote add upstream https://github.com/web-masons/vagrant-ansible-php-cli
    ```
 
 2. If you cloned a while ago, get the latest changes from upstream:
