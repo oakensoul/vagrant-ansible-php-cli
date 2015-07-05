@@ -36,22 +36,6 @@ To begin using the environment, you will need to clone it from GitHub.
 $ git clone git@github.com:oakensoul/vagrant-ansible-php-cli.git
 ```
 
-### Ansible Galaxy
-
-This project uses Ansible Galaxy, if you wish to commit back an update that uses a new role, place them in the
-`ansible/localhost/galaxy-requirements.yml` file. For example, if you wished to install GeerlingGuy's Firewall role,
-place a section like the following into the yml file.
-
-```bash
-# Install GeerlingGuy's Firewall Role
-#   https://galaxy.ansible.com/list#/roles/451
-#   https://github.com/geerlingguy/ansible-role-firewall
-- src: geerlingguy.firewall
-```
-
-Once you have updated the `galaxy-requirements.yml` file, you will need to uncomment the line in the
-`ansible/localhost/provision.sh` file that runs ansible galaxy.
-
 ### Vagrant
 
 Once you have the repository cloned, you need only spin up your Vagrant environment. If you need information about
