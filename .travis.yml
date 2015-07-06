@@ -1,0 +1,15 @@
+language: python
+python:
+  - '2.7'
+before_script:
+  - sudo apt-get update -qq
+  - sudo apt-get install -qq python-apt python-pycurl
+install:
+  - pip install ansible
+  - ansible-playbook ansible/localhost/vagrant.yml --inventory-file=ansible/inventory/travis.ini --syntax-check
+  - ansible-playbook ansible/localhost/vagrant.yml --inventory-file=ansible/inventory/travis.ini --connection=local
+script:
+  - php -v
+notifications:
+  hipchat:
+    secure: H67iUy6iVQYSnKoqafC4WGg6/V8zJ66IFjRHI2/TsVPvUeBDsTAg2D8enfjGTAMCU0G/X0O84Dm/83CVX5WO/O2ekmferVeF8Lli+I45F52x9jowOLInil2wVlVZpxyS+QYx/QrLq8ttgzl/zg2MFdt7bDYfxcrRK04ckHXwKdfyOgh1x6MY/Kz2GBiwJo/yf890preB4WzlRbyRNIaQkS5I/Pcl70gQ7iaBsj5Wy6nJ8ypaGosASTHY0aWT0fbn319jXAyIMw3AssEK7FiXLdkUHhGVCrYlqTAenTVEMDPwLOLQh434dk2Sw8pZxCTacZBvapXuXB/UaPAGhhg1DhdDidQo4G4BfOve4UdiZ/9xC3kRRzT2CfUrN8tg55WFANrBb7uI03gtNwxRERIlM/D6tBo3cI6EQ6EZQ+LAyvDG6j3tJOYzgge1nnle3mpFosecMpJkyXYwa4txU7+GT5ONXn9ruifxW9YCsNJ4ODDlk+WGOPe9SoZ+6HwLRA3xVYCN/uTJWkmj/CeDB0jDmczB3i1W0uvH+ZqHv4sX6Uup/hyKTdhSEjCn2sarRx9UTeYYsGO1ufLz9DAC92fmy0rVKoTe3hVLoWUXQC1WNj2sXd6OInvc7/m81lTX+3H2SrpP6mfb/1QQJ6WxRmi3VRii2d+4qjA4QryZ5nw5IEY=
