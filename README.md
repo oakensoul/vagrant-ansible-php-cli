@@ -1,16 +1,30 @@
 [![Build Status](https://travis-ci.org/web-masons/vagrant-ansible-php-cli.svg)](https://travis-ci.org/web-masons/vagrant-ansible-php-cli)
 # Vagrant Ansible PHP CLI
 
-A Vagrant environment for creating a Box for running command line PHP scripts using the shell provisioner to run
-Ansible. This box is not intended as a web server and doesn't have Apache/nginx installed.
+Are you looking to work on a PHP CLI project, but don't want to handle all of
+the various steps required to get it set up on your machine? Virtual Machines
+are the answer, and this project creates a VM for you using either Ubuntu 14.04
+or Ubuntu 12.04. These machines can also be used as the starting point for
+creating your production server. These boxes are created from a base box
+of [Ansible Citadel](https://github.com/web-masons/vagrant-ansible-citadel) with
+additional Ansible Playbooks adding PHP 5.6.
+
+There is no webserver installed however, though i'll likely create another
+project that creates the start of a production web server for PHP 5.6.
+
+In theory, you could also use PHP's built in "web-server" to test modules you
+are developing as well without the effort of setting up Apache or nginx.
 
 ## Usage
-As mentioned, the output of this project is a Vagrant Box. To use the Box for one of your projects, simply
-add the following to your Vagrantfile.
+The output of this project is a collection of Vagrant Boxes. To use one of the
+Boxes for one of your projects, simply add the following to your Vagrantfile.
 
 ```bash
-# Use Ansible PHP CLI box
-  config.vm.box = "oakensoul/ansible-php-cli"
+  # Use Ansible Citadel based on ubuntu/trusty64
+  config.vm.box = "oakensoul/ansible-php-cli-trusty64"
+
+  # Use Ansible Citadel based on hashicorp/precise64
+  config.vm.box = "oakensoul/ansible-php-cli-precise64"
 ```
 
 ## Contributing

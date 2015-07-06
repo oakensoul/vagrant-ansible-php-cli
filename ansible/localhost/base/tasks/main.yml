@@ -20,6 +20,12 @@
         - python-psycopg2
         - git
         - ntp
+
+    - name: install PHP 5
+      sudo: yes
+      apt: pkg={{ item }} state=latest
+      tags: [packages]
+      with_items:
         - php5
 
     - name: Check NTP service to make sure it's running
