@@ -6,6 +6,7 @@ before_script:
   - sudo apt-get install -qq python-apt python-pycurl
 install:
   - pip install ansible
+  - ansible-playbook ansible/localhost/vagrant.yml --inventory-file=ansible/inventory/travis.ini --syntax-check
   - ansible-playbook ansible/localhost/vagrant.yml --inventory-file=ansible/inventory/travis.ini --connection=local
 script:
   - php -v
